@@ -52,7 +52,7 @@ int main ()
     output_file << "<p>You have lived : " << years << " years, " << months << " months, and " << days << " days.</p>\n\n";
     output_file << "</div>\n";
     output_file.close();
-    std::cout << "written to readme.md" << std::endl;
+    std::cout << "written to README.md" << std::endl;
  }
 
  else
