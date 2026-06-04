@@ -54,9 +54,7 @@ int main ()
  {
     output_file << "<div align=\"center\">\n\n";
     output_file << "<h1>Age Calculator</h1>\n\n";
-    output_file << "<img src=\"https://countdown.livecounts.site/p/embed?target=2007-06-12T00:00:00.000Z&style=flip&timezone=Africa/Cairo\" alt=\"Live Countdown\" />\n\n";
-    output_file << "<br><br>\n\n";
-    output_file << "<p>You have lived : " << years << " years, " << months << " months, and " << days << " days, and " << hours << " hours, and " << minutes << " minutes, and " << seconds << " seconds.</p>\n\n";
+    output_file << "<p>You have lived : " << years << " years," << months << " months, and " << days << " days, and " << hours << " hours, and " << minutes << " minutes, and " << seconds << " seconds.</p>\n\n";
     output_file << "</div>\n";
     output_file.close();
     std::cout << "written to README.md" << std::endl;
