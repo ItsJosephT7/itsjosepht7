@@ -23,5 +23,5 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add readme.md
+        git add README.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update README with alive counter" && git push)
