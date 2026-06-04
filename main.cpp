@@ -53,7 +53,7 @@ int main ()
  if (output_file.is_open())
  {
     output_file << "<div align=\"center\">\n\n";
-    output_file << "<h1>عايش بقالي كام سنة ؟؟</h1>\n\n";
+    output_file << "<h1>The time I waste since Born : </h1>\n\n";
     output_file << "<p> < " << years << " years, " << months << " months, " << days << " days, " << hours << " hours, " << minutes << " minutes, " << seconds << " seconds > </p>\n\n";
     output_file << "</div>\n";
     output_file.close();
