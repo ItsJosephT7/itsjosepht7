@@ -44,7 +44,7 @@ int main ()
  long long seconds = total_seconds % 60;
 
 
- std::cout << "You have lived : " << years << " years, " << months << " months, and " << days << " days." << hours << " hours, " << minutes << " minutes, and " << seconds << " seconds." << std::endl;
+ std::cout << " < " << years << " years, " << months << " months, " << days << " days, " << hours << " hours, " << minutes << " minutes, " << seconds << " seconds" <<" > " << std::endl;
  std::cout<< std::endl;
 
 
@@ -53,8 +53,8 @@ int main ()
  if (output_file.is_open())
  {
     output_file << "<div align=\"center\">\n\n";
-    output_file << "<h1>Age Calculator</h1>\n\n";
-    output_file << "<p>You have lived : " << years << " years, " << months << " months, and " << days << " days, and " << hours << " hours, and " << minutes << " minutes, and " << seconds << " seconds.</p>\n\n";
+    output_file << "<h1>عايش بقالي كام سنة ؟؟</h1>\n\n";
+    output_file << "<p> < " << years << " years, " << months << " months, " << days << " days, " << hours << " hours, " << minutes << " minutes, " << seconds << " seconds > </p>\n\n";
     output_file << "</div>\n";
     output_file.close();
     std::cout << "written to README.md" << std::endl;
