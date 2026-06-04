@@ -1,7 +1,7 @@
 <div align="center">
 
-<h1>عايش بقاله كام سنة ؟</h1>
+<h1>عايش بقالي كام سنة ؟؟</h1>
 
-<p>You have lived : 18 years, 11 months, and 2 days, and 18 hours, and 29 minutes, and 44 seconds.</p>
+<p> < 18 years, 11 months, 2 days, 19 hours, 57 minutes, 36 seconds > </p>
 
 </div>
