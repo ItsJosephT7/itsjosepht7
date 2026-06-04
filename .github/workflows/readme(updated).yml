@@ -1,27 +1,16 @@
-name: Update readme Every Hour
-
-on:
-  schedule:
-    - cron: '0 * * * *'
-  workflow_dispatch: 
-  
-jobs:
-  build-and-run:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Compile C++ Code
-      run: g++ -std=c++17 main.cpp -o updater
-
-    - name: Run Updater
-      run: ./updater
-
-    - name: Commit and Push changes
+- name: Commit and Push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add readme.md
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update readme with alive counter" && git push)
+        
+        echo "=== Current Files ==="
+        ls -la
+        
+        git add *.md || true
+        
+        if [ -n "$(git status --porcelain)" ]; then
+          git commit -m "Update README with alive counter"
+          git push
+        else
+          echo "No changes detected to commit."
+        fi
