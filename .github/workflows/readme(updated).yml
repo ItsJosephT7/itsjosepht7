@@ -1,4 +1,25 @@
-- name: Commit and Push changes
+name: Update README Every Hour
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:  
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Compile C++ Code
+      run: g++ -std=c++17 main.cpp -o updater
+
+    - name: Run Updater
+      run: ./updater
+
+    - name: Commit and Push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
