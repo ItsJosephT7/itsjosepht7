@@ -37,10 +37,15 @@ int main ()
 
  long long months = total_days / 30;
  total_days %= 30;
-
  long long days = total_days;
 
- std::cout << "You have lived : " << years << " years, " << months << " months, and " << days << " days." << std::endl;
+ long long hours = (total_seconds % (24 * 60 * 60)) / (60 * 60);
+ long long minutes = (total_seconds % (60 * 60)) / 60;
+ long long seconds = total_seconds % 60;
+
+
+ std::cout << "You have lived : " << years << " years, " << months << " months, and " << days << " days." << hours << " hours, " << minutes << " minutes, and " << seconds << " seconds." << std::endl;
+ std::cout<< std::endl;
 
 
 
@@ -49,7 +54,7 @@ int main ()
  {
     output_file << "<div align=\"center\">\n\n";
     output_file << "<h1>Age Calculator</h1>\n\n";
-    output_file << "<p>You have lived : " << years << " years, " << months << " months, and " << days << " days.</p>\n\n";
+    output_file << "<p>You have lived : " << years << " years," << months << " months, and " << days << " days, and " << hours << " hours, and " << minutes << " minutes, and " << seconds << " seconds.</p>\n\n";
     output_file << "</div>\n";
     output_file.close();
     std::cout << "written to README.md" << std::endl;
