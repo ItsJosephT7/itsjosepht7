@@ -24,14 +24,11 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        echo "=== Current Files ==="
-        ls -la
+        git add README.md || true
         
-        git add *.md || true
-        
-        if [ -n "$(git status --porcelain)" ]; then
+        if git diff --staged --quiet; then
+          echo "No changes detected in README.md, skipping commit."
+        else
           git commit -m "Update README with alive counter"
           git push
-        else
-          echo "No changes detected to commit."
         fi
