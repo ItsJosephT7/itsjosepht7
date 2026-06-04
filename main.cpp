@@ -44,7 +44,7 @@ int main ()
 
 
 
- std::ofstream output_file("readme.md");
+ std::ofstream output_file("README.md");
  if (output_file.is_open())
  {
     output_file << "<div align=\"center\">\n\n";
