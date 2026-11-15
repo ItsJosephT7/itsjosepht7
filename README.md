@@ -2,6 +2,6 @@
 
 <h1>The Time I Waste Since Born : </h1>
 
-<p> < 19 years, 4 months, 11 days, 16 hours, 30 minutes, 44 seconds > </p>
+<p> < 19 years, 4 months, 11 days, 21 hours, 12 minutes, 18 seconds > </p>
 
 </div>
